@@ -11,8 +11,11 @@ Java 기반 알고리즘 문제 풀이 저장소 🎯
 - **목적:** BOJ(백준) / solved.ac 문제 풀이와 풀이 노트 정리  
 - **구성:** 주차별(Week) 디렉토리 아래에 문제별 Java 파일 배치
 
-[![Solved.ac 프로필](https://img.shields.io/badge/solved.ac-dddd2356-blue)](https://solved.ac/profile/dddd2356)  
-[![Languages](https://img.shields.io/badge/language-Java-orange)](https://github.com/dddd2356/algorithm-study)  
+<div align="center">
+  
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dddd2356)](https://solved.ac/dddd2356/)
+![mazandi profile](http://mazandi.herokuapp.com/api?handle=dddd2356&theme=warm)
+</div>
 
 ## 목표
 
