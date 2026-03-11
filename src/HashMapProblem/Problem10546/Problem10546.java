@@ -1,4 +1,4 @@
-package Problem10546;
+package HashMapProblem.Problem10546;
 
 import java.io.BufferedReader;
 import java.io.IOException;

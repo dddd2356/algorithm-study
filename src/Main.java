@@ -1,37 +1,26 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Stack;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine().trim());
-        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        int[] A = new int[n];
-        for (int i = 0; i < n; i++) {
-            A[i] = Integer.parseInt(st.nextToken());
+        String s;
+        HashMap<String,Integer> map = new HashMap<>();
+        double total=0;
+        while((s=br.readLine())!=null){
+            map.put(s, map.getOrDefault(s,0)+1);
+            total++;
         }
-
-        int[] result = new int[n];
-        Stack<int[]> stack = new Stack<>(); // {높이, 인덱스(1-based)}
-
-        for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && stack.peek()[0] < A[i]) {
-                stack.pop();
-            }
-            result[i] = stack.isEmpty() ? 0 : stack.peek()[1];
-            stack.push(new int[]{A[i], i + 1});
-        }
-
+        ArrayList<String> result = new ArrayList<>();
+        result.addAll(map.keySet());
+        Collections.sort(result);
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            sb.append(result[i]);
-            if (i < n - 1) sb.append(" ");
+        for(int i=0; i<result.size(); i++){
+            String avg = String.format("%.4f", map.get(result.get(i))/total*100);
+            sb.append(result.get(i)).append(" ").append(avg).append("\n");
         }
         System.out.println(sb);
     }
 }
-
